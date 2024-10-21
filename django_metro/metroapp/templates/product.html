@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подробности продукта</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    {% include 'components/header.html' %}
+
+    <main>
+        <img id="unique-image" src="{{route.thumbnail}}" alt="Пример изображения">
+        <div class="journeybox">{{route.origin}} - 
+            {{route.destination}}</div>
+        <div class="infobox">{{route.description}}</div>
+
+    </main>
+</body>
+</html>

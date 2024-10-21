@@ -1,0 +1,26 @@
+{% load static %}
+
+<header class="header">
+    <!-- логотип в виде кнопки -->
+        
+    <a href="{% url 'index-page'%}" class="logo-button">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo">
+    </a>
+    <input type="text" class="search-bar" placeholder="Поиск">
+    <!-- Корзина в виде кнопки -->
+    <a href="{% url 'cart-page' id=order.id%}" class="logo-button">
+        <div class="bin">
+            <span>{{ order.routes.count }}</span>
+            <img src="{% static 'img/bin.png' %}" alt="Корзина">
+        </div>
+    </a>
+    <button class="bin-button" onclick="window.location.href='bin.html';">
+    </button>
+
+    <form action="{% url 'products-page' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="query" type="text" class="search-bar" value="{{ request.POST.query}}">
+        <input type=image src="{% static 'img/search.png' %}" class="search">
+    </form>
+    
+</header>
