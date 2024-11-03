@@ -3,23 +3,21 @@
 <header class="header">
     <!-- логотип в виде кнопки -->
         
-    <a href="{% url 'index-page'%}" class="logo-button">
+    <a href="{% url 'index-view'%}" class="logo-button">
         <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo">
     </a>
     <input type="text" class="search-bar" placeholder="Поиск">
     <!-- Корзина в виде кнопки -->
-    <a href="{% url 'cart-page' id=order.id%}" class="logo-button">
+    <a href="{% url 'order-view' id=order.id%}" class="logo-button">
         <div class="bin">
-            <span>{{ order.routes.count }}</span>
+            <span>{{ routes_amount }}</span>
             <img src="{% static 'img/bin.png' %}" alt="Корзина">
         </div>
     </a>
-    <button class="bin-button" onclick="window.location.href='bin.html';">
-    </button>
 
-    <form action="{% url 'products-page' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'showcase-view' %}" method="get" enctype="multipart/form-data">
         {% csrf_token %}
-        <input name="query" type="text" class="search-bar" value="{{ request.POST.query}}">
+        <input name="query" type="text" class="search-bar" value="{{ request.GET.query}}">
         <input type=image src="{% static 'img/search.png' %}" class="search">
     </form>
     

@@ -1,15 +1,17 @@
     <div class="card">
+        {% if route.thumbnail %}
         <img src="{{route.thumbnail}}" alt="Иконка маршрута" class="journey-icon">
+        {% endif %}
         <h2>МАРШРУТ</h2>
         <p>{{route.origin}} - {{route.destination}}</p>
         <!-- Кнопка "Оплатить" -->
-        <form action="{% url 'add-to-cart' %}"  method="post" enctype="multipart/form-data">
+        <form action="{% url 'add-to-order-action' %}"  method="post" enctype="multipart/form-data">
             {% csrf_token %}
             <input name="productId" type="hidden" value={{route.id}}>
             <input name="next" type="hidden" value={{request.get_full_path}}>
             <input type=submit class="pay-button" value="Добавить в корзину {{route.price}}">
         </form>
         <!-- Кнопка "Подробнее" -->
-        <a href="{% url "product-page" id=route.id %}" class="details-button">Подробнее</a>        
+        <a href="{% url "route-view" id=route.id %}" class="details-button">Подробнее</a>        
         <!-- Повторить блок div для других карточек -->
     </div>

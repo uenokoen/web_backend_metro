@@ -1,13 +1,14 @@
 from django.urls import path
-from . import views
+from metroapp.controllers import views, actions
 
 
 urlpatterns = [
-    path("", views.index, name='index-page'),
-    path("products", views.products, name='products-page'),
-    path("cart/<int:id>", views.cart, name='cart-page'),
-    path("product/<int:id>", views.product, name='product-page'),
-    path("add-to-cart", views.add_to_cart, name='add-to-cart'),
-    path("pay-order", views.pay_order, name='pay-order'),
-    path("delete-order", views.delete_order, name='delete-order'),
+    path("", views.index, name='index-view'),
+    path("showcase", views.showcase, name='showcase-view'),
+    path("order/<int:id>", views.order, name='order-view'),
+    path("route/<int:id>", views.route, name='route-view'),
+
+    path("add-to-order", actions.add_to_cart, name='add-to-order-action'), 
+    path("form-order", actions.form_order, name='form-order-action'),           
+    path("delete-order", actions.delete_order, name='delete-order-action'),
 ]
