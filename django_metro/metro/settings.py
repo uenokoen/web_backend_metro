@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'metroapp.apps.MetroappConfig',
 ]
 
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'metro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'metro',
+        'NAME': 'lab3',
         'USER': 'postgres',
         'PASSWORD': '123',
         'HOST': 'localhost',
@@ -133,3 +134,8 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+MINIO_URL = "http://127.0.0.1:9001"
+MINIO_ACCESS_KEY = "minio"
+MINIO_SECRET_KEY = "minio124"
+MINIO_BUCKET_NAME = "project"

@@ -1,13 +1,30 @@
 from django.urls import path
-from . import views
-
+from metroapp.controllers.views import (
+    RouteListAPIView,
+    RouteDetailAPIView,
+    RouteImageAPIView,
+    TripListAPIView,
+    TripDetailAPIView,
+    RouteTripAPIView,
+    TripModerateAPIView,
+    TripFormAPIView,
+    UserRegistrationAPIView, UserUpdateAPIView,
+    UserAuthAPIView, UserDeauthAPIView,
+)
 
 urlpatterns = [
-    path("", views.index, name='index-page'),
-    path("products", views.products, name='products-page'),
-    path("cart/<int:id>", views.cart, name='cart-page'),
-    path("product/<int:id>", views.product, name='product-page'),
-    path("add-to-cart", views.add_to_cart, name='add-to-cart'),
-    path("pay-order", views.pay_order, name='pay-order'),
-    path("delete-order", views.delete_order, name='delete-order'),
+    path("routes/", RouteListAPIView.as_view()),
+    path("routes/<int:route_id>/", RouteDetailAPIView.as_view()),
+    path("routes/<int:route_id>/image/", RouteImageAPIView.as_view()),
+    path("routes/<int:route_id>/trip/", RouteTripAPIView.as_view()),
+
+    path("trips/", TripListAPIView.as_view()),
+    path("trips/<int:trip_id>/", TripDetailAPIView.as_view()),
+    path("trips/<int:trip_id>/form/", TripFormAPIView.as_view()),
+    path("trips/<int:trip_id>/finish/", TripModerateAPIView.as_view()),
+
+    path("users/register/", UserRegistrationAPIView.as_view()),
+    path("users/update/", UserUpdateAPIView.as_view()),
+    path("users/auth/", UserAuthAPIView.as_view()),
+    path("users/deauth/", UserDeauthAPIView.as_view()),
 ]
