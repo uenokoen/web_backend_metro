@@ -1,0 +1,276 @@
+a {
+    text-decoration: none;
+}
+
+.body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.span {
+    display: inline-block;
+    width: 20px; /* размер кружка */
+    height: 20px; /* размер кружка */
+    border-radius: 50%; /* округлые края для круга */
+    background-color: #1abc9c; /* цвет фона */
+    text-align: center; /* выравнивание текста по центру */
+    color: white; /* цвет текста */
+    font-size: 12px; /* размер текста */
+    line-height: 20px; /* выравнивание текста по вертикали */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(6, 78%, 57%);
+    padding: 20px;
+    height: 120px;
+}
+
+.logo {
+    height: 146px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.logo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 250px; /* Уменьшенная ширина */
+    position: absolute;
+    top: 71px;   /* Отступ сверху */
+    right: 90px;
+}
+
+.bin {
+    height: 45px;
+    cursor: pointer;
+    margin-top: 10px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    margin-left: 1000px; /* Отступ слева */
+    margin-right: 15px; /* Отступ справа */
+}
+
+.bin-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search {
+    height: 45px;
+    top: 45px;   /* Отступ сверху */
+    right: 300px
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 20px;
+    gap: 100px;
+}
+
+.card {
+    background-color: #E8EBED;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 258px; /* Ширина каждой карточки */
+    height: 559px; /* Высота каждой карточки */
+    margin: 5px 10px; /* Отступы вокруг карточек */
+    text-align: center;
+    padding: 20px;
+    max-width: 2920px;
+    flex-wrap: wrap;
+}
+
+.journey-icon {
+    width: 210px;
+    height: 263px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10%;
+}
+
+.pay-button, .details-button, .delete-button{
+    background-color: #1abc9c;
+    color: white;
+    height: 80px;
+    width: 200px;
+    margin: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-button{
+    background-color: #ff5555;
+}
+
+.bintext{
+    background-color:#E8EBED;
+    height:14px;
+}
+
+.card-container-bin {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding: 20px;
+    gap: 100px;
+}
+
+.card-bin {
+    background-color: #E8EBED;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 100%;
+    margin-right: 10px;
+}
+
+.gray-rectangle {
+    width: 458px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 150px;
+    padding: 20px;
+    background-color: #E8EBED;
+    margin: 20px ;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;           /* Используем flex для центрирования текста */
+    justify-content:center; /* Выравнивание по горизонтали слева */
+    align-items: center;      /* Выравнивание по вертикали снизу */     /* Внутренний отступ для текста */
+    color: rgb(36, 34, 34);            /* Цвет текста */
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;        /* Размер шрифта */
+    font-weight: bold;
+}
+
+.pay-rectangle {
+    flex-shrink: 0;
+    width: 1300px;            /* Ширина синего прямоугольника */
+    height: 190px;           /* Высота синего прямоугольника */
+    background-color: #1abc9c;  /* Цвет фона */
+    display: flex;           /* Используем flex для центрирования текста */
+    justify-content: center;  /* Центрируем текст по горизонтали */
+    align-items: center;      /* Центрируем текст по вертикали */
+    color: rgb(36, 34, 34);             /* Цвет текста */
+    font-family: 'Roboto', sans-serif; /* Шрифт текста */
+    font-size: 64px;        /* Размер шрифта */
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 10px;   /* Толщина шрифта */
+}
+
+.vertcontainer-bin {
+    display: flex;           /* Используем flexbox для размещения прямоугольников рядом */
+    gap: 20px;
+    width: 2000px;
+    flex-direction: row;        /* Промежуток между прямоугольниками */
+}
+
+.payment {
+    width: 1300px;            /* Ширина синего прямоугольника */
+    background-color: #1abc9c;  /* Цвет фона */           /* Используем flex для центрирования текста */
+    justify-content: center;  /* Центрируем текст по горизонтали */
+    align-items: center;      /* Центрируем текст по вертикали */
+    color: rgb(36, 34, 34);             /* Цвет текста */
+    font-family: 'Roboto', sans-serif; /* Шрифт текста */
+    font-size: 64px;        /* Размер шрифта */
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 540px;
+}
+
+.flex-row {
+    display: flex; /* Включаем flexbox */
+    gap: 20px; /* Промежуток между элементами (можно настроить) */
+    margin: 20px;
+}
+
+.smallpayment {
+    margin-top: 450px;
+    width: 1260px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    padding: 20px;
+    background-color: #E8EBED;
+    margin-left: 20px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 90px;
+    display: flex;           /* Используем flex для центрирования текста */      /* Выравнивание по вертикали снизу */
+    padding: 20px;          /* Внутренний отступ для текста */
+    color: rgb(36, 34, 34);            /* Цвет текста */
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;        /* Размер шрифта */
+    font-weight: bold;
+}
+
+#unique-image {
+    width: 335px;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+    top: 70px;
+    left: 30px;
+}
+
+.journeybox {
+    margin-left: 25px;
+    margin-top: 130px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    padding: 20px;
+    background-color: hsl(6, 78%, 57%);;
+    margin-left: 6;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 90px;
+    display: flex;           /* Используем flex для центрирования текста */      /* Выравнивание по вертикали снизу */
+    padding: 20px;          /* Внутренний отступ для текста */
+    color: #E8EBED;            /* Цвет текста */
+    font-family: 'Roboto', sans-serif;
+    font-size: 45px;        /* Размер шрифта */
+    font-weight: bold;
+}
+
+.infobox{
+    position: absolute;
+    width: 1410px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 550px;
+    padding: 20px;
+    background-color: hsl(6, 78%, 57%);
+    margin-left: 2;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 90px;
+    display: flex;           /* Используем flex для центрирования текста */
+    justify-content: center;  /* Центрируем текст по горизонтали */
+    align-items: center;      /* Центрируем текст по вертикали */
+    padding: 20px;          /* Внутренний отступ для текста */
+    color: #E8EBED;            /* Цвет текста */
+    font-family: 'Roboto', sans-serif;
+    font-size: 64px;        /* Размер шрифта */
+    font-weight: bold;
+}
+
+.journey-header {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    color: hsl(6, 78%, 57%);
+}

@@ -1,0 +1,24 @@
+{% load static %}
+
+<header class="header">
+    <!-- логотип в виде кнопки -->
+        
+    <a href="{% url 'index-view'%}" class="logo-button">
+        <img src="{% static 'img/logo.png' %}" alt="Логотип" class="logo">
+    </a>
+    <input type="text" class="search-bar" placeholder="Поиск">
+    <!-- Корзина в виде кнопки -->
+    <a href="{% url 'trip-view' id=trip.id%}" class="logo-button">
+        <div class="bin">
+            <span class="span">{{ routes_amount }}</span>
+            <img src="{% static 'img/bin.png' %}" alt="Корзина">
+        </div>
+    </a>
+
+    <form action="{% url 'index-view' %}" method="get" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="query" type="text" class="search-bar" value="{{ request.GET.query}}">
+        <input type=image src="{% static 'img/search.png' %}" class="search">
+    </form>
+    
+</header>
